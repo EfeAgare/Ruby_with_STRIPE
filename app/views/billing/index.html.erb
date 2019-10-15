@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mt-4 text-center">
+      <h1> Welcome  <%= @user %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <h2 class="col-md-12 mt-5 text-center">
+      Are you ready to pay?
+    </h2>
+  </div>
+  <div class="row">
+    <div class="col-md-12 mt-4 text-center">
+      <%= form_tag create_payment_method_path, id: "billing-create-payment-method" do  %>
+        <%= link_to "Let's go", add_payment_method_path, remote: true, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div
